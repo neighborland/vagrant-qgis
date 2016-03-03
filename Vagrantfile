@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
     vb.cpus = 4
     vb.memory = "4096"
     vb.name = "qgis"
+    vb.customize ["modifyvm", :id, "--vram", "32"]
   end
 
   config.ssh.forward_x11 = true
